@@ -61,7 +61,7 @@ include("auth.php"); //include auth.php file on all secure pages ?>
                         <a href="#">Cuenta de <?php echo $_SESSION['username']; ?>!</a>
                     </li>
                     <li>
-                        <a href="#">Registrar una pieza</a>
+                        <a href="registro_pieza.php">Registrar una pieza</a>
                     </li>
                     <li>
                         <a href="#">Buscar Pieza</a>

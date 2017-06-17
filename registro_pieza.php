@@ -16,7 +16,7 @@
 <?php
 	require('db.php');
     // If form submitted, insert values into the database.
-    if (isset($_REQUEST['username'])){
+    if (isset($_REQUEST['marca_auto'])){
 		$marca_auto = stripslashes($_REQUEST['marca_auto']); // removes backslashes
 		$marca_auto = mysqli_real_escape_string($con,$marca_auto);
 		$modelo_auto = stripslashes($_REQUEST['modelo_auto']); // removes backslashes

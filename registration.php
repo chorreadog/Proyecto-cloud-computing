@@ -1,6 +1,5 @@
 <?php
 /*
-Author: Javed Ur Rehman
 Website: http://www.allphptricks.com/
 */
 ?>
@@ -32,7 +31,7 @@ Website: http://www.allphptricks.com/
         $query = "INSERT into `users` (Name, Lastname, username, password, email, trn_date) VALUES ('$Name','$Lastname','$username', '".md5($password)."', '$email', '$trn_date')";
         $result = mysqli_query($con,$query);
         if($result){
-            echo "<div class='form'><h3>Te registraste exitosamente.</h3><br/>Has click aqui para <a href='login.php'>Iniciar sesion</a></div>";
+            echo "<div class='form'> <h3>Te registraste exitosamente.</h3> <br/>Has click aqui para <a href='login.php'>Iniciar sesion</a> </div>";
         }
     }else{
 ?>

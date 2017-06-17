@@ -64,7 +64,7 @@ include("auth.php"); //include auth.php file on all secure pages ?>
                         <a href="registro_pieza.php">Registrar una pieza</a>
                     </li>
                     <li>
-                        <a href="#">Buscar Pieza</a>
+                        <a href="buscar_pieza.php">Buscar Pieza</a>
                     </li>
                 </ul>
             </div>

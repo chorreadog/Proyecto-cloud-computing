@@ -25,7 +25,9 @@ Website: http://www.allphptricks.com/
 
 	//Checking is user existing in the database or not
         $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
+				//seleccionar todo de la tabla users
 		$result = mysqli_query($con,$query) or die(mysql_error());
+		//metodo query toma un parametro que es un sql query
 		$rows = mysqli_num_rows($result);
         if($rows==1){
 			$_SESSION['username'] = $username;
@@ -43,7 +45,7 @@ Website: http://www.allphptricks.com/
 <input type="password" name="password" placeholder="Contraseña" required />
 <input name="submit" type="submit" value="Inicio de Sesion" />
 </form>
-<p>No te has registrado aun? <a href='registration.php'>Registrate aqui</a></p>
+<p> No te has registrado aun? <a href='registration.php'>Registrate aqui</a></p>
 
 
 </div>

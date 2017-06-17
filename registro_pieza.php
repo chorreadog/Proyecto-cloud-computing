@@ -17,24 +17,25 @@
 	require('db.php');
     // If form submitted, insert values into the database.
     if (isset($_REQUEST['username'])){
-		$marca_auto = stripslashes($_REQUEST['Name']); // removes backslashes
-		$marca_auto = mysqli_real_escape_string($con,$Name);
-		$modelo_auto = stripslashes($_REQUEST['Lastname']); // removes backslashes
-		$modelo_auto = mysqli_real_escape_string($con,$Lastname);
-		$nombre_pieza = stripslashes($_REQUEST['username']); // removes backslashes
-		$nombre_pieza = mysqli_real_escape_string($con,$username); //escapes special characters in a string
-		$num_spieza = stripslashes($_REQUEST['email']);
-		$num_spieza = mysqli_real_escape_string($con,$email);
-		$desc_pieza = stripslashes($_REQUEST['password']);
-		$desc_pieza = mysqli_real_escape_string($con,$password);
-    $precio_venta = stripslashes($_REQUEST['password']);
-		$precio_venta = mysqli_real_escape_string($con,$password);
-    $cantidad_pieza = stripslashes($_REQUEST['password']);
-		$cantidad_pieza = mysqli_real_escape_string($con,$password);
-    $año_fabricacion = mysqli_real_escape_string($con,$password);
-    $año_fabricacion = stripslashes($_REQUEST['password']);
+		$marca_auto = stripslashes($_REQUEST['marca_auto']); // removes backslashes
+		$marca_auto = mysqli_real_escape_string($con,$marca_auto);
+		$modelo_auto = stripslashes($_REQUEST['modelo_auto']); // removes backslashes
+		$modelo_auto = mysqli_real_escape_string($con,$modelo_auto);
+		$nombre_pieza = stripslashes($_REQUEST['nombre_pieza']); // removes backslashes
+		$nombre_pieza = mysqli_real_escape_string($con,$nombre_pieza); //escapes special characters in a string
+		$num_spieza = stripslashes($_REQUEST['num_spieza']);
+		$num_spieza = mysqli_real_escape_string($con,$num_spieza);
+		$desc_pieza = stripslashes($_REQUEST['desc_pieza']);
+		$desc_pieza = mysqli_real_escape_string($con,$desc_pieza);
+    $precio_venta = stripslashes($_REQUEST['precio_venta']);
+		$precio_venta = mysqli_real_escape_string($con,$precio_venta);
+    $cantidad_pieza = stripslashes($_REQUEST['cantidad_pieza']);
+		$cantidad_pieza = mysqli_real_escape_string($con,$cantidad_pieza);
+    $año_fabricacion = stripslashes($_REQUEST['año_fabricacion']);
+    $año_fabricacion = mysqli_real_escape_string($con,$año_fabricacion);
 
-        $query = "INSERT into `users` (Name, Lastname, username, password, email, trn_date) VALUES ('$Name','$Lastname','$username', '".md5($password)."', '$email', '$trn_date')";
+
+        $query = "INSERT into `registro_pieza` (marca_auto, modelo_auto, nombre_pieza, num_spieza, desc_pieza, precio_venta, cantidad_pieza, año_fabricacion) VALUES ('$marca_auto','$modelo_auto','$nombre_pieza', '$num_spieza', '$desc_pieza', '$precio_venta',''$cantidad_pieza','$año_fabricacion')";
         $result = mysqli_query($con,$query);
         if($result){
             echo "<div class='form'> <h3>Tu pieza fue registrada exitosamente.</h3> <br/>Has click aqui para <a href='index.php'>regresar al menu</a> </div>";
